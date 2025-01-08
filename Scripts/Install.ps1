@@ -43,10 +43,12 @@ $global:InputObject = $InputObject
 function PreInstall {
 	$cs.Log_SectionHeader('PreInstall', 'o')
 
+	$cs.Job_WriteLog('Importing HP.Private module')
 	Import-Module (Join-Path $global:Packageroot 'kit' 'HP.Private' ) -Force
+
+	$cs.Job_WriteLog('Importing HP.ClientManagement module')
 	Import-Module (Join-Path $global:Packageroot 'kit' 'HP.ClientManagement' $global:ModuleVersion 'HP.UEFI.psm1') -Force
-	Import-Module (Join-Path $global:Packageroot 'kit' 'HP.ClientManagement') -Force
-}
+	Import-Module (Join-Path $global:Packageroot 'kit' 'HP.ClientManagement') -Force}
 
 function Install {
 	$cs.Log_SectionHeader('Install', 'o')
