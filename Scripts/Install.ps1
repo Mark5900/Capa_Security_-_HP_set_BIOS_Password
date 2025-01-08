@@ -64,6 +64,8 @@ function Install {
 		}
 
 		Set-HPBIOSSetupPassword -Password $global:PlaintextPassword
+
+		$cs.Job_WriteLog('DONE - Setting BIOS password.')
 	}
 }
 
