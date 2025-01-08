@@ -1,0 +1,10 @@
+{
+	"SoftwareName": "",
+	"SoftwareVersion": "",
+	"CapaServer": "MRACAPA01",
+	"SQLServer": "MRACAPA01",
+	"Database": "CapaInstaller",
+	"DefaultManagementPoint": "1",
+	"PackageBasePath": "E:\\Dev\\ComputerJobs",
+	"PackageVersion": "v1.0"
+}
