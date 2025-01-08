@@ -1,6 +1,6 @@
 {
-	"SoftwareName": "",
-	"SoftwareVersion": "",
+	"SoftwareName": "Security - HP set BIOS Password",
+	"SoftwareVersion": "1.8.1",
 	"CapaServer": "MRACAPA01",
 	"SQLServer": "MRACAPA01",
 	"Database": "CapaInstaller",

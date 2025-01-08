@@ -18,9 +18,16 @@ Param(
 ###################
 #### VARIABLES ####
 ###################
-[bool]$global:DownloadPackage = $true # Set to $true if you want to download the kit folder from the server
+$global:PlaintextPassword = '' # The BIOS password you want to set. If DecryptionKey and EncryptedPassword are set, this will be ignored.
+
+# The decryption key for the password.
+$global:DecryptionKey = '19,204,47,116,15,88,240,202,75,23,109,107,29,37,147,63,241,130,34,138,37,167,34,181,243,241,57,104,164,206,129,26'
+# The encrypted password.
+$global:EncryptedPassword = '76492d1116743f0423413b16050a5345MgB8AEgAbwBVAGoAcgBKAGkAKwAzAHMAMQBQAG4ARgA4AE4ATABlAE4AMgA5AEEAPQA9AHwANAA4ADkAMgBlADcAMAA5AGMAOAAxAGUAMgBkADUAZgBjADcAZQA3AGUAYgAwAGYANQA4ADYAYQA3AGIAZABhADkANQBlADAAZQA3ADEANgBlAGUAYgAzADcANAA3AGIAYQBlAGYANQBkAGIANwBlADMANwA5ADYAYQBhAGUANQBmADkANwA1ADMANwA3ADIAMgA0ADAAZQBkADYAYgA4AGQAMwBiADIAYgA0ADEAZAA4ADUAZQAxADYAYgA5ADQA'
 
 # DO NOT CHANGE THESE VARIABLES
+$global:ModuleVersion = '1.8.1'
+
 $global:Packageroot = $Packageroot
 $global:AppName = $AppName
 $global:AppRelease = $AppRelease
@@ -28,16 +35,36 @@ $global:LogFile = $LogFile
 $global:TempFolder = $TempFolder
 $global:DllPath = $DllPath
 $global:InputObject = $InputObject
+[bool]$global:DownloadPackage = $true # Set to $true if you want to download the kit folder from the server
 
 ###################
 #### FUNCTIONS ####
 ###################
 function PreInstall {
-  $cs.Log_SectionHeader("PreInstall",'o')
+	$cs.Log_SectionHeader('PreInstall', 'o')
+
+	Import-Module (Join-Path $global:Packageroot 'kit' 'HP.Private' ) -Force
+	Import-Module (Join-Path $global:Packageroot 'kit' 'HP.ClientManagement' $global:ModuleVersion 'HP.UEFI.psm1') -Force
+	Import-Module (Join-Path $global:Packageroot 'kit' 'HP.ClientManagement') -Force
 }
 
 function Install {
-  $cs.Log_SectionHeader("Install",'o')
+	$cs.Log_SectionHeader('Install', 'o')
+
+	if (Get-HPBIOSSetupPasswordIsSet) {
+		$cs.Job_WriteLog('BIOS password is already set.')
+	} else {
+		$cs.Job_WriteLog('Setting BIOS password.')
+
+		# Decrypting the password to plaintext
+		if ($global:DecryptionKey -and $global:EncryptedPassword) {
+			$SecureString = $global:EncryptedPassword | ConvertTo-SecureString -Key $global:DecryptionKey
+			$BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($SecureString)
+			$global:PlaintextPassword = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+		}
+
+		Set-HPBIOSSetupPassword -Password $global:PlaintextPassword
+	}
 }
 
 function PostInstall {

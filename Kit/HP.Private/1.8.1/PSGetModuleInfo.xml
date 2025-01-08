@@ -1,0 +1,260 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">HP.Private</S>
+      <Version N="Version">1.8.1</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Private utility module for HP Client Management Script Library</S>
+      <S N="Author">HP Development Company L.P.</S>
+      <Obj N="CompanyName" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>txvalp</S>
+          <S>hpcmsl</S>
+        </LST>
+      </Obj>
+      <S N="Copyright">(C) Copyright 2018-2024 HP Development Company, L.P.</S>
+      <DT N="PublishedDate">1900-01-01T00:00:00+01:00</DT>
+      <Obj N="InstalledDate" RefId="2">
+        <DT>2025-01-07T15:12:05.9565614+01:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="3">
+            <TN RefId="2">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://developers.hp.com/node/11493</URI>
+      <URI N="ProjectUri">https://developers.hp.com/clientmanagement</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="4">
+        <TNRef RefId="1" />
+        <LST>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="5">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-HPPrivateReadINI</S>
+                <S>Get-HPPrivateTemporaryFileName</S>
+                <S>GetLockedStreamForWrite</S>
+                <S>GetSharedFileInformation</S>
+                <S>Invoke-HPPrivateDownloadFile</S>
+                <S>Get-HPPrivateCurrentOs</S>
+                <S>Send-HPPrivateKMSRequest</S>
+                <S>Invoke-HPPrivateKMSErrorHandle</S>
+                <S>Test-WinPE</S>
+                <S>Get-HPPrivateCurrentOsBitness</S>
+                <S>Get-HPPrivateUnicodePath</S>
+                <S>Invoke-PostDownloadSoftpaqAction</S>
+                <S>Get-HPPrivateAllowedHttpsProtocols</S>
+                <S>Get-HPPrivateCacheDirPath</S>
+                <S>Get-HPPrivateCheckSignature</S>
+                <S>Invoke-HPPrivateDeleteCachedItem</S>
+                <S>Invoke-HPPrivateSafeRemove</S>
+                <S>Invoke-HPPrivateExpandCAB</S>
+                <S>Test-HPPrivateIsDownloadNeeded</S>
+                <S>Test-HPPrivateIsRunningOnISE</S>
+                <S>Test-HPPrivateIsLongPathSupported</S>
+                <S>Test-HPPrivateIsValidXmlFile</S>
+                <S>Get-HPPrivateTempFileName</S>
+                <S>Get-HPPrivateTempPath</S>
+                <S>Get-HPPrivateTempFilePath</S>
+                <S>Get-HPPrivateUserAgent</S>
+                <S>GetCurrentOSVer</S>
+                <S>Get-HPPrivateCurrentDisplayOSVer</S>
+                <S>validateWmiResult</S>
+                <S>validateWmiResultInCategory</S>
+                <S>Test-HPPrivateCustomResult</S>
+                <S>Convert-HPPrivateObjectToBytes</S>
+                <S>Get-HPPrivatePublicKeyCoalesce</S>
+                <S>Get-HPPrivateX509CertCoalesce</S>
+                <S>Get-HPPrivatePublicKeyCertificateFromPFX</S>
+                <S>Invoke-HPPrivateSignData</S>
+                <S>Get-HPPrivateHash</S>
+                <S>Get-HPPrivateOfflineCacheFiles</S>
+                <S>Get-HPPrivateItemUrl</S>
+                <S>biosErrorCodesToString</S>
+                <S>getBiosSettingInterface</S>
+                <S>getNamespace</S>
+                <S>Get-HPPrivateSecurePlatformIsProvisioned</S>
+                <S>Get-HPPrivateFileContent</S>
+                <S>Get-HPPrivateSettingsFromPayload</S>
+                <S>Get-HPPrivateSettingsFromPayloadFile</S>
+                <S>Get-HPPrivateSettingsFromJsonFile</S>
+                <S>Get-HPPrivateSettingsFromJson</S>
+                <S>Get-HPPrivateSettingsFromBcuFile</S>
+                <S>Get-HPPrivateDesiredValue</S>
+                <S>Get-HPPrivateSettingsFromCsvFile</S>
+                <S>Get-HPPrivateSettingsFromXmlFile</S>
+                <S>Get-HPPrivateSettingsFromFile</S>
+                <S>Invoke-HPPrivateSetSetting</S>
+                <S>Get-HPPrivateUseAuthString</S>
+                <S>Set-HPPrivateBIOSSetting</S>
+                <S>Get-HPPrivateIsSureAdminEnabled</S>
+                <S>Get-HPPrivateIsSureAdminSupported</S>
+                <S>newCimSession</S>
+                <S>Set-HPPrivateBIOSSettingsList</S>
+                <S>Set-HPPrivateBIOSSettingsListPayload</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="8">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-HPPrivateReadINI</S>
+                <S>Get-HPPrivateTemporaryFileName</S>
+                <S>GetLockedStreamForWrite</S>
+                <S>GetSharedFileInformation</S>
+                <S>Invoke-HPPrivateDownloadFile</S>
+                <S>Get-HPPrivateCurrentOs</S>
+                <S>Send-HPPrivateKMSRequest</S>
+                <S>Invoke-HPPrivateKMSErrorHandle</S>
+                <S>Test-WinPE</S>
+                <S>Get-HPPrivateCurrentOsBitness</S>
+                <S>Get-HPPrivateUnicodePath</S>
+                <S>Invoke-PostDownloadSoftpaqAction</S>
+                <S>Get-HPPrivateAllowedHttpsProtocols</S>
+                <S>Get-HPPrivateCacheDirPath</S>
+                <S>Get-HPPrivateCheckSignature</S>
+                <S>Invoke-HPPrivateDeleteCachedItem</S>
+                <S>Invoke-HPPrivateSafeRemove</S>
+                <S>Invoke-HPPrivateExpandCAB</S>
+                <S>Test-HPPrivateIsDownloadNeeded</S>
+                <S>Test-HPPrivateIsRunningOnISE</S>
+                <S>Test-HPPrivateIsLongPathSupported</S>
+                <S>Test-HPPrivateIsValidXmlFile</S>
+                <S>Get-HPPrivateTempFileName</S>
+                <S>Get-HPPrivateTempPath</S>
+                <S>Get-HPPrivateTempFilePath</S>
+                <S>Get-HPPrivateUserAgent</S>
+                <S>GetCurrentOSVer</S>
+                <S>Get-HPPrivateCurrentDisplayOSVer</S>
+                <S>validateWmiResult</S>
+                <S>validateWmiResultInCategory</S>
+                <S>Test-HPPrivateCustomResult</S>
+                <S>Convert-HPPrivateObjectToBytes</S>
+                <S>Get-HPPrivatePublicKeyCoalesce</S>
+                <S>Get-HPPrivateX509CertCoalesce</S>
+                <S>Get-HPPrivatePublicKeyCertificateFromPFX</S>
+                <S>Invoke-HPPrivateSignData</S>
+                <S>Get-HPPrivateHash</S>
+                <S>Get-HPPrivateOfflineCacheFiles</S>
+                <S>Get-HPPrivateItemUrl</S>
+                <S>biosErrorCodesToString</S>
+                <S>getBiosSettingInterface</S>
+                <S>getNamespace</S>
+                <S>Get-HPPrivateSecurePlatformIsProvisioned</S>
+                <S>Get-HPPrivateFileContent</S>
+                <S>Get-HPPrivateSettingsFromPayload</S>
+                <S>Get-HPPrivateSettingsFromPayloadFile</S>
+                <S>Get-HPPrivateSettingsFromJsonFile</S>
+                <S>Get-HPPrivateSettingsFromJson</S>
+                <S>Get-HPPrivateSettingsFromBcuFile</S>
+                <S>Get-HPPrivateDesiredValue</S>
+                <S>Get-HPPrivateSettingsFromCsvFile</S>
+                <S>Get-HPPrivateSettingsFromXmlFile</S>
+                <S>Get-HPPrivateSettingsFromFile</S>
+                <S>Invoke-HPPrivateSetSetting</S>
+                <S>Get-HPPrivateUseAuthString</S>
+                <S>Set-HPPrivateBIOSSetting</S>
+                <S>Get-HPPrivateIsSureAdminEnabled</S>
+                <S>Get-HPPrivateIsSureAdminSupported</S>
+                <S>newCimSession</S>
+                <S>Set-HPPrivateBIOSSettingsList</S>
+                <S>Set-HPPrivateBIOSSettingsListPayload</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+        </DCT>
+      </Obj>
+      <Version N="PowerShellGetFormatVersion">2.0</Version>
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="9">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="10">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(C) Copyright 2018-2024 HP Development Company, L.P.</S>
+          <S N="description">Private utility module for HP Client Management Script Library</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">False</S>
+          <S N="isAbsoluteLatestVersion">False</S>
+          <S N="versionDownloadCount">2742474</S>
+          <S N="downloadCount">115188653</S>
+          <S N="packageSize">776374</S>
+          <S N="published">01-01-1900 00:00:00 +01:00</S>
+          <S N="created">10-12-2024 16:47:58 +01:00</S>
+          <S N="lastEdited">10-12-2024 19:00:35 +01:00</S>
+          <S N="lastUpdated">07-01-2025 14:10:00 +01:00</S>
+          <S N="tags">PowerShellGetFormatVersion_2.0 PSModule PSFunction_Get-HPPrivateReadINI PSCommand_Get-HPPrivateReadINI PSFunction_Get-HPPrivateTemporaryFileName PSCommand_Get-HPPrivateTemporaryFileName PSFunction_GetLockedStreamForWrite PSCommand_GetLockedStreamForWrite PSFunction_GetSharedFileInformation PSCommand_GetSharedFileInformation PSFunction_Invoke-HPPrivateDownloadFile PSCommand_Invoke-HPPrivateDownloadFile PSFunction_Get-HPPrivateCurrentOs PSCommand_Get-HPPrivateCurrentOs PSFunction_Send-HPPrivateKMSRequest PSCommand_Send-HPPrivateKMSRequest PSFunction_Invoke-HPPrivateKMSErrorHandle PSCommand_Invoke-HPPrivateKMSErrorHandle PSFunction_Test-WinPE PSCommand_Test-WinPE PSFunction_Get-HPPrivateCurrentOsBitness PSCommand_Get-HPPrivateCurrentOsBitness PSFunction_Get-HPPrivateUnicodePath PSCommand_Get-HPPrivateUnicodePath PSFunction_Invoke-PostDownloadSoftpaqAction PSCommand_Invoke-PostDownloadSoftpaqAction PSFunction_Get-HPPrivateAllowedHttpsProtocols PSCommand_Get-HPPrivateAllowedHttpsProtocols PSFunction_Get-HPPrivateCacheDirPath PSCommand_Get-HPPrivateCacheDirPath PSFunction_Get-HPPrivateCheckSignature PSCommand_Get-HPPrivateCheckSignature PSFunction_Invoke-HPPrivateDeleteCachedItem PSCommand_Invoke-HPPrivateDeleteCachedItem PSFunction_Invoke-HPPrivateSafeRemove PSCommand_Invoke-HPPrivateSafeRemove PSFunction_Invoke-HPPrivateExpandCAB PSCommand_Invoke-HPPrivateExpandCAB PSFunction_Test-HPPrivateIsDownloadNeeded PSCommand_Test-HPPrivateIsDownloadNeeded PSFunction_Test-HPPrivateIsRunningOnISE PSCommand_Test-HPPrivateIsRunningOnISE PSFunction_Test-HPPrivateIsLongPathSupported PSCommand_Test-HPPrivateIsLongPathSupported PSFunction_Test-HPPrivateIsValidXmlFile PSCommand_Test-HPPrivateIsValidXmlFile PSFunction_Get-HPPrivateTempFileName PSCommand_Get-HPPrivateTempFileName PSFunction_Get-HPPrivateTempPath PSCommand_Get-HPPrivateTempPath PSFunction_Get-HPPrivateTempFilePath PSCommand_Get-HPPrivateTempFilePath PSFunction_Get-HPPrivateUserAgent PSCommand_Get-HPPrivateUserAgent PSFunction_GetCurrentOSVer PSCommand_GetCurrentOSVer PSFunction_Get-HPPrivateCurrentDisplayOSVer PSCommand_Get-HPPrivateCurrentDisplayOSVer PSFunction_validateWmiResult PSCommand_validateWmiResult PSFunction_validateWmiResultInCategory PSCommand_validateWmiResultInCategory PSFunction_Test-HPPrivateCustomResult PSCommand_Test-HPPrivateCustomResult PSFunction_Convert-HPPrivateObjectToBytes PSCommand_Convert-HPPrivateObjectToBytes PSFunction_Get-HPPrivatePublicKeyCoalesce PSCommand_Get-HPPrivatePublicKeyCoalesce PSFunction_Get-HPPrivateX509CertCoalesce PSCommand_Get-HPPrivateX509CertCoalesce PSFunction_Get-HPPrivatePublicKeyCertificateFromPFX PSCommand_Get-HPPrivatePublicKeyCertificateFromPFX PSFunction_Invoke-HPPrivateSignData PSCommand_Invoke-HPPrivateSignData PSFunction_Get-HPPrivateHash PSCommand_Get-HPPrivateHash PSFunction_Get-HPPrivateOfflineCacheFiles PSCommand_Get-HPPrivateOfflineCacheFiles PSFunction_Get-HPPrivateItemUrl PSCommand_Get-HPPrivateItemUrl PSFunction_biosErrorCodesToString PSCommand_biosErrorCodesToString PSFunction_getBiosSettingInterface PSCommand_getBiosSettingInterface PSFunction_getNamespace PSCommand_getNamespace PSFunction_Get-HPPrivateSecurePlatformIsProvisioned PSCommand_Get-HPPrivateSecurePlatformIsProvisioned PSFunction_Get-HPPrivateFileContent PSCommand_Get-HPPrivateFileContent PSFunction_Get-HPPrivateSettingsFromPayload PSCommand_Get-HPPrivateSettingsFromPayload PSFunction_Get-HPPrivateSettingsFromPayloadFile PSCommand_Get-HPPrivateSettingsFromPayloadFile PSFunction_Get-HPPrivateSettingsFromJsonFile PSCommand_Get-HPPrivateSettingsFromJsonFile PSFunction_Get-HPPrivateSettingsFromJson PSCommand_Get-HPPrivateSettingsFromJson PSFunction_Get-HPPrivateSettingsFromBcuFile PSCommand_Get-HPPrivateSettingsFromBcuFile PSFunction_Get-HPPrivateDesiredValue PSCommand_Get-HPPrivateDesiredValue PSFunction_Get-HPPrivateSettingsFromCsvFile PSCommand_Get-HPPrivateSettingsFromCsvFile PSFunction_Get-HPPrivateSettingsFromXmlFile PSCommand_Get-HPPrivateSettingsFromXmlFile PSFunction_Get-HPPrivateSettingsFromFile PSCommand_Get-HPPrivateSettingsFromFile PSFunction_Invoke-HPPrivateSetSetting PSCommand_Invoke-HPPrivateSetSetting PSFunction_Get-HPPrivateUseAuthString PSCommand_Get-HPPrivateUseAuthString PSFunction_Set-HPPrivateBIOSSetting PSCommand_Set-HPPrivateBIOSSetting PSFunction_Get-HPPrivateIsSureAdminEnabled PSCommand_Get-HPPrivateIsSureAdminEnabled PSFunction_Get-HPPrivateIsSureAdminSupported PSCommand_Get-HPPrivateIsSureAdminSupported PSFunction_newCimSession PSCommand_newCimSession PSFunction_Set-HPPrivateBIOSSettingsList PSCommand_Set-HPPrivateBIOSSettingsList PSFunction_Set-HPPrivateBIOSSettingsListPayload PSCommand_Set-HPPrivateBIOSSettingsListPayload PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-01-07T14:10:00Z</S>
+          <S N="NormalizedVersion">1.8.1</S>
+          <S N="Authors">HP Development Company L.P.</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">HP.Private.nuspec|dfmbios32.dll|dfmbios64.dll|HP.CMSLHelper.dll|HP.CMSLHelper.dll.config|HP.Private.psd1|HP.Private.psm1|license.txt|Microsoft.Identity.Client.dll|System.Security.Cryptography.ProtectedData.dll</S>
+          <S N="GUID">9F47EFBC-1124-46F3-87AB-F2D15D169CE7</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="CompanyName">HP Inc</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Administrator\Documents\PowerShell\Modules\HP.Private\1.8.1</S>
+    </MS>
+  </Obj>
+</Objs>
